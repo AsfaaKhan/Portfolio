@@ -208,6 +208,7 @@ width:100%;
 
 .about1{
   margin-top: 40px;
+  padding: 40px;
   display: flex ;
   flex-direction: column;
   justify-content: center;
@@ -234,6 +235,7 @@ width:100%;
 
 .about2{
   margin-top: 40px;
+  padding: 40px;
   display: flex ;
   flex-direction: column-reverse;
   justify-content: center;
@@ -280,7 +282,6 @@ width:100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-
 }
 /* FOOTER */
 .footer{
