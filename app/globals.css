@@ -1,27 +1,570 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(202, 192, 192);
+}
+
+.container {
+  align-items: center;
+  padding: 50px;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* HEADER STYLES */
+
+.header{
+  height: 90vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url("/images/portfolioBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Navbar */
+nav {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url("/images/portfolioBg.jpg");
+  padding: 20px 0;
+}
+
+.navbar{
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width:100%;
+}
+
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+}
+.logo {
+  color: var(--primary);
+  font-size: 30px;
+  font-family: "Style Script", cursive;
+  font-style: italic;
+  display:  flex;
+  align-items: center;  
+  text-align: center;
+
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-link {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  background-color: transparent;
+  padding: 20px 0;
+  text-align: center;
+  top: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mobile-nav li {
+  padding: 10px;
+}
+
+.mobile-nav .nav-link {
+  font-size: 1.2rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .header{
+    height: 70vh;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+@media(max-width:1028px){
+  .header{
+    height: 50vh;
+}
+.container {
+  padding: 90px;
+}
+}
+
+
+/* HOME PAGE CSS */
+.heroSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.heroSection h1{
+  font-size: 58px;
+  text-shadow: 1px 1px 2px white;
+  font-family: Dawning of a New Day;
+  border-bottom: 2px solid rgb(26, 24, 24);
+ 
+}
+.heroSection p{
+  font-size: 30px;
+  margin-top: 10px;
+  text-shadow: 1px 1px 2px white ;
+}
+.heroSection .btn{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color:black;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3 ease ;
+}
+.heroSection .btn:hover{
+  background-color: transparent;
+  border: none;
+  border-style: double;
+  text-shadow: 1px 1px 2px white ;
+  font-weight: 700;
+  color: blue;
+}
+ 
+
+/* About Page */
+.aboutImage{
+  display: none;
+  margin-top: 40px;
+  height:50vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url("/images/nextjspic.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+width:100%;
+}
+
+
+.aboutMe{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about1{
+  margin-top: 40px;
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.about1 .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin: 25px;
+  width: 300px;
+  
+}
+.about1 .content h4{
+  font-size: 30px;
+}
+.about1 .content p{
+  font-size: 14px;
+}
+
+
+.about2{
+  margin-top: 40px;
+  display: flex ;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.about2 .content{
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 20px;
+  width: 300px;
+}
+.about2 .content h4{
+  font-size: 30px;
+}
+.about2 .content p{
+  font-size: 14px;
+}
+@media (min-width:768px){
+  .aboutImage{
+    display: block;
+  }
+  .about1{
+    flex-direction: row;
+
+  }
+  .about1 .content{
+    width: auto;
+  }
+  .about2{
+    flex-direction: row;
+  }
+  .about2 .content{
+    width: auto;
+  }
+}
+.parallax{
+  height:100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url("/images/html.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+/* FOOTER */
+.footer{
+color: white;
+background-color: #222;
+text-align: center;
+padding: 2rem;
+display: flex ;
+flex-direction: column;
+gap: 20px;
+}
+.social-media-links  {
+  margin: 2rem;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.link2:hover{
+  color: #1717dd;
+}
+.link1:hover{
+  color: #050505;
+}
+.link3:hover{
+  color: rgb(26, 26, 129);
+}
+
+/* ABOUT SECTION ON HOME PAGE */
+.aboutSec{
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 90px;
+}
+
+.heading{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 45px;
+  font-family: Dawning of a New Day ;
+  text-shadow: 1px 1px 2px white ;
+  border-bottom: 2px solid rgb(26, 24, 24);
+}
+
+
+.aboutSec .text h3{
+  font-size: 35px;
+  font-weight: 700;
+  font-family: Drawing of a new day;
+  text-shadow: 1px 1px 2px white 
+}
+
+.aboutSec .text p{
+  margin-top: 16px;
+  font-size: 15px;
+  word-spacing: 2px;
+}
+
+.aboutSec .text .links{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+
+}
+.aboutSec .text span{
+  color: blue;
+  text-shadow: 1px 1px 2px white;
+}
+.aboutSec .aboutImg{
+  border-radius: 50px;
+}
+.aboutBtn{
+  color: rgb(0, 0, 0);
+}
+.aboutBtn:hover{
+  color: blue;
+  border-bottom: 2px solid rgb(26, 24, 24);
+  text-shadow: 1px 1px 2px white;
+}
+
+/*  PROJECTS SECTION */
+.project{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projectSec{
+  display:  flex;
+  flex-direction: column;
+
+
+}
+.projectSec h1{
+  font-size: 45px;
+  text-align: center;
+  font-family:  Drawing of a new day ;
+  text-shadow: 1px 1px 2px white;
+}
+.projectSec .projectImg{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.projectSec .projectImg .middle{
+  text-align: center;
+  align-items: center;
+}
+.projectSec .projectImg .middle .webLink{
+  font-size: 20px;
+  color: black;
+  text-shadow: 1px 1px 2px black ;
+}
+.projectSec .projectImg .middle .webLink:hover{
+  border-bottom: 2px solid rgb(26, 24, 24);
+  color: blue;
+
+}
+
+.projectSec .projectBtn{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.projectSec .btn{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color:black;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3 ease ;
+}
+.projectSec .btn:hover{
+  background-color: transparent;
+  border-style:groove;
+  text-shadow: 1px 1px 2px white ;
+  font-weight: 700;
+  color: blue;
+}
+ 
+
+
+/* RESPONSIVE NAVBAR */
+@media(max-width:786px) {
+  
+  .heroSection h1 {
+    font-size: 28px;
+  }
+
+  .heroSection p {
+    font-size: 16px;
+  }
+
+  .heroSection button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .footer {
+    padding: 1rem;
+  }
+
+  .social-media-links i {
+    margin: 1rem;
+  }
+
+  /* About Section */
+  .aboutSec{
+    flex-direction: column;
+  }
+  /* Project Section */
+  .project{
+    margin-top: 80px;
+  }
+  .projectSec{
+    padding: 30px;
+  }
+
+  .projectSec h1{
+    font-size: 30px;
+  }
+  .projectSec .projectImg{
+  flex-direction: column;
+  }
+  
+
+}
+
+/* @media (min-width:1028px)
+{
+  .project{
+    margin-top: 80px;
+  }
+  .projectSec .projectImg{
+    flex-direction: row;
+    }
+
+} */
+
+
+
+/* Contact Page */
+
+  .contactPage {
+    height: 100vh;
+  }
+.contactPage{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contactPage .content{
+  padding: 30px;
+box-shadow: 1px 2px 3px 2px white;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  font-size: 50px ;
+}
+.contactPage .content a{
+  color: #1717dd;
+}
+.contactPage .content a:hover{
+  color: white;
+}
+.github:hover{
+  padding: 5px;
+  color: white;
+}
+.linkedin:hover{
+  padding: 5px;
+  color: blue;
+}
+.twitter:hover{
+  padding: 5px;
+  color: blue;
+}
+.contactPage .links{
+  display:  flex;
+  gap: 20px;
+}
+
+@media (min-width : 648px){
+
+
+  .contactPage{
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+  }
+}
+@media (min-width : 768px){
+ 
+
+  .contactPage{
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+  }
+  
+ 
+}
+@media (min-width:900px){
+  .contactPage .content{
+
+    flex-direction: row;
+  }
+  .contactPage .content{
+    padding: 60px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
