@@ -208,7 +208,6 @@ width:100%;
 
 .about1{
   margin-top: 40px;
-  padding: 40px;
   display: flex ;
   flex-direction: column;
   justify-content: center;
@@ -235,7 +234,6 @@ width:100%;
 
 .about2{
   margin-top: 40px;
-  padding: 40px;
   display: flex ;
   flex-direction: column-reverse;
   justify-content: center;
@@ -263,6 +261,7 @@ width:100%;
   }
   .about1{
     flex-direction: row;
+    padding: 50px;
 
   }
   .about1 .content{
@@ -270,6 +269,7 @@ width:100%;
   }
   .about2{
     flex-direction: row;
+    padding: 50px;
   }
   .about2 .content{
     width: auto;
