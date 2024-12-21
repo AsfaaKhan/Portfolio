@@ -12,11 +12,11 @@ export default function ContactPage() {
                     <div className="content">
                         <div className="links">
                             <BsGithub className="github" size={50}  />
-                            <Link href={"/https://github.com/AsfaaKhan"}>Github</Link>
+                            <Link href={"https://github.com/AsfaaKhan"}>Github</Link>
                         </div>
                         <div className="links">
                             <BsLinkedin className="linkedin" size={50} />
-                            <Link href={"/https://www.linkedin.com/in/asfaa-khan-4b80a0267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>Linkedin</Link>
+                            <Link href={"https://www.linkedin.com/in/asfaa-khan-4b80a0267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>Linkedin</Link>
                         </div>
                         <div className="links">
                             <BsTwitter className="twitter" size={50} />
