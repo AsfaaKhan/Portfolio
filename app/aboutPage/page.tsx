@@ -6,10 +6,10 @@ export default function About() {
         <div>
 
             {/* ABOUT PAGE DESIGING */}
-            <div className="container aboutMe">
+            <div className=" aboutMe">
                 <h1 className="heading ">About Me</h1>
 
-                <div className="about1">
+                <div className="container about1">
 
                     <div>
                         <Image src={"/images/aboutWeb.jpg"}
@@ -31,7 +31,8 @@ export default function About() {
                 {/* Parallax */}
                 <div className="aboutImage">
                 </div>
-                <div className="about2">
+
+                <div className=" container about2">
                     <div className="content">
                         <h4 >About My projects:</h4>
                         <p> As part of my learning, I am also diving into Next.js, a powerful React framework that helps with server-side rendering and building full-stack applications. To further improve the aesthetics and functionality of my web projects, I am honing my skills in Tailwind CSS, a utility-first CSS framework that enables rapid and responsive design.
