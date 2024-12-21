@@ -14,8 +14,8 @@ export default function About() {
                     <div>
                         <Image src={"/images/aboutWeb.jpg"}
                             alt="about"
-                            width={400}
-                            height={400}>
+                            width={300}
+                            height={250}>
                         </Image>
                     </div>
 
@@ -40,8 +40,8 @@ export default function About() {
                     <div>
                         <Image src={"/images/html.jpg"}
                             alt="about"
-                            width={400}
-                            height={400}>
+                            width={300}
+                            height={250}>
                         </Image>
                     </div>
 
